@@ -26,6 +26,7 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\x}{\bm{x}}
 
 \lstset{
     language = C++,
@@ -49,14 +50,32 @@
 
 \maketitle
 
+この資料は, 高橋陽一郎著『微分方程式入門』（基礎数学シリーズ 6 , 東京大学出版会）を参考に、常微分方程式の基本的な内容をまとめ直したものである。
+
 \section{序論}
 
 \subsection{微分方程式とその解}
 
-一般に、未知変数 $x$ のある階数までの導関数 $\frac{d^ix}{dt^i}\ (i=1, \cdots, p)$ の間に与えられた関数関係を $x$ に関する\textgt{常微分方程式}と呼び、関数 $x=x(t)$ が求まればその\textgt{解}であるという。実 $n$ 空間を $\R^n$ と書く。
+一般に、未知変数 $x$ のある階数までの導関数 $\frac{d^ix}{dt^i}\ (i=1, \cdots, p)$ の間に与えられた関数関係を $x$ に関する\textgt{常微分方程式}と呼び、関数 $x=x(t)$ が求まればその\textgt{解}であるという. 実 $n$ 空間を $\R^n$ と書く.
 
 \begin{definition}
-    $D$ を $\R^{n+1}$ の領域、$f: D\to \R^n$ とする。
+    $D$ を $\R^{n+1}$ の領域、$f: D\to \R^n$ をベクトル値関数とする. このとき,
+    \begin{equation}
+        \label{def1}
+        \frac{d\x}{dt}=f(t, \x),\ (t, \x)\in D,\ t\in\R,\ \x\in\R^n
+    \end{equation}
+    の形のものを\textgt{正規形常微分方程式}という。方程式の右辺 $f(t, \x)$ が $t$ によらない関数で与えられるとき、これは\textgt{自励的}であるという.
 \end{definition}
+
+\begin{definition}
+    $\exists\ I\subset\R$ で定義された $\R^n$ 値関数 $\x(t)=(x_1(t), x_2(t), \cdots, x_n(t))$ が次の３条件を満たすとき、常微分方程式 (\ref{def1}) の解であるという.
+    \begin{enumerate}
+        \item $\forall t\in I$ に対して $(t, \x(t))\in D$
+        \item 関数 $\x(t)$ は微分可能
+        \item $\forall t\in I$ に対して, 等式 $\frac{d\x}{dt}(t)=f(t, \x(t))$ が成立
+    \end{enumerate}
+\end{definition}
+
+幾何学的に考えれば、自励的な常微分方程式の解 $x(t),\ t\in I$ とは
 
 \end{document}
