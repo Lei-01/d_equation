@@ -41,6 +41,7 @@
 \theorembodyfont{\normalfont}
 \newtheorem{theorem}{定理}
 \newtheorem{definition}[theorem]{定義}
+\newtheorem{example}[theorem]{例}
 
 \title{常微分方程式}
 \author{Lei}
@@ -93,5 +94,21 @@
             \item 右辺 $f(t, x)$ が更にパラメータに依存するとき、解のパラメータに関する連続性や微分可能性
         \end{enumerate}
 \end{itemize}
+
+これらの疑問を考察する前に、いくつか例を見てみることにする。
+
+\begin{example}{（指数関数）　}
+    $n=1, \alpha\in\R, (t_0, x_0)\in\R^2$ とする。初期値問題
+    \[
+        \frac{dx}{dt}=\alpha x,\ x(t_0)=x_0\]
+    の解は $x(t)=x_0e^{\alpha(t-t_0)}$ であり、定義域は $I=\R$ である。
+\end{example}
+
+\begin{example}{（調和振動）　}
+    $\omega\in\R$ とし、
+    \[
+        \frac{d^2 u}{dt^2}=-\omega^2 u\]
+    を考える。これは正規形ではないが、$x_1=u, x_2=\frac{du}{dt}$ とおけば $x=\left(\begin{matrix}x_1\\x_2\end{matrix}\right)$ に対する正規形方程式
+\end{example}
 
 \end{document}
