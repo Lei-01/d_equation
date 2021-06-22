@@ -76,6 +76,22 @@
     \end{enumerate}
 \end{definition}
 
-幾何学的に考えれば、自励的な常微分方程式の解 $x(t),\ t\in I$ とは
+幾何学的に考えれば、自励的\footnote{方程式 (1) の右辺が $t$ によらない関数で与えられるとき、(1) は自励的という。}な常微分方程式の解 $x(t),\ t\in I$ とは、与えられた領域内にある微分可能な曲線で、各点で与えられているベクトル $f$ を接ベクトルとするもののことである\footnote{解を $\R^n$ 内の曲線と考える時、\textgt{解曲線}ということがある。}。
+
+微分方程式を考察する際、次のような問題が生じてくる。
+
+\begin{itemize}
+    \item 運動は定まるのか。言い換えれば
+        \begin{enumerate}
+            \item （局所）解は存在するのか
+            \item 解の定義域はどれだけ広げられるか
+            \item 初期値問題\footnote{$D$ の点 $(x_0, t_0)$ を与えたとき、条件\begin{equation}x(t_0)=x_0\end{equation}を満たす解を求めること。}の解は一意的に定まるか
+        \end{enumerate}
+    \item 更に、次の問題に答えられるか否かは、微分方程式を考えること自体にも関わってくる。
+        \begin{enumerate}
+            \item 初期値 $x(t_0)=x_0$ に関する解の連続性や微分可能性
+            \item 右辺 $f(t, x)$ が更にパラメータに依存するとき、解のパラメータに関する連続性や微分可能性
+        \end{enumerate}
+\end{itemize}
 
 \end{document}
